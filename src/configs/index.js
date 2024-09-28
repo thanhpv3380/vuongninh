@@ -1,0 +1,22 @@
+const {
+  PORT,
+  PAGE_NUMBER,
+  PAGE_SIZE,
+  PAGE_SIZE_LIMIT,
+  FILE_SIZE_LIMIT,
+
+  SUBSCRIBE_FILE_PATH,
+  DEFAULT_LANGUAGE,
+} = process.env;
+
+module.exports = {
+  PORT: PORT || 80,
+  FILE_SIZE_LIMIT: parseInt(FILE_SIZE_LIMIT || '2', 10), // MB
+
+  PAGE_NUMBER_DEFAULT: parseInt(PAGE_NUMBER || '1', 10),
+  PAGE_SIZE_DEFAULT: parseInt(PAGE_SIZE || '10', 10),
+  PAGE_SIZE_LIMIT_DEFAULT: parseInt(PAGE_SIZE_LIMIT || '1000', 10),
+
+  SUBSCRIBE_FILE_PATH: SUBSCRIBE_FILE_PATH || 'subscribes.csv',
+  DEFAULT_LANGUAGE,
+};
